@@ -3,6 +3,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: "0 0 * * *" # Runs at 00:00 UTC every day
 
 jobs:
   npm-install-recent:
