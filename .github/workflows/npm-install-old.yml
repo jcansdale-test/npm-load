@@ -6,7 +6,7 @@ on:
 
 jobs:
   npm-install:
-    runs-on: linux
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v1
         with:
