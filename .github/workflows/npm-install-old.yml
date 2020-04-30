@@ -6,7 +6,7 @@ on:
 
 jobs:
   npm-install:
-    runs-on: linux-latest
+    runs-on: linux
     steps:
       - uses: actions/setup-node@v1
         with:
