@@ -5,7 +5,16 @@ on:
     branches: [ master ]
 
 jobs:
-  npm-install:
+  npm-install-recent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://npm.pkg.github.com'
+      - run: npm install @jcansdale-test/npm-load@1.0.1049
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  npm-install-older:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v1
